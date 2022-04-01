@@ -14,8 +14,18 @@ values(4,'kuresh',1500,GETDATE()),
 
 select * from employee_payroll;
 
-select  Salary from employee_payroll            #selecting salary of duresh
+select  Salary from employee_payroll           
 where Name='Duresh';
 
-select * from employee_payroll
-where StartDate BETWEEN CAST('2022-04-01'  as  DATE) AND DATE(NOW());
+
+ALTER TABLE employee_payroll ADD Gender CHAR(1) ;
+
+update employee_payroll set Gender ='F' where Name='Proohan'; 
+
+update employee_payroll set Gender ='M' where Name='Duresh';
+
+update employee_payroll set Gender ='F' where Name='Kuresh';
+
+update employee_payroll set Gender ='M' where Name='Shubham';
+
+update employee_payroll set Gender ='M' where Name='Suresh';
