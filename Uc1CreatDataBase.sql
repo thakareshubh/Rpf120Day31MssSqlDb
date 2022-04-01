@@ -1,10 +1,12 @@
 create database payroll_service;
 use payroll_service;
-create table employye_payroll
+create table employee_payroll
 (
-Id int primary key,
-Name varchar(50),
+Id int Identity primary key,
+Name varchar(50) Not Null,
 Salary varchar(50) Not Null,
 StartDate datetime default GetDate(),
 )
-EXEC sp_rename 'employye_payroll', 'employee_payroll';
+insert into employee_payroll(Id,Name,Salary,StartDate)
+values(1,'Shubham',2000,GETDATE())
+select * from employee_payroll
